@@ -1,0 +1,9 @@
+#myAudio {
+  display: none;
+}
+span {
+  margin: 0px 10px;
+}
+.playing {
+  background: yellow;
+}
