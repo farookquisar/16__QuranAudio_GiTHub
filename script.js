@@ -9,10 +9,10 @@ var audioAddress = [
 
 // ------------------------------------------------------------------------------->>
 // Button Click
-$("button").click(playAll);
+///-$("button").click(playAll);
 
 //
-  function playAll() {
+  ///-function playAll() {
   Promise.all(audioAddress.map(function(url) {
     return new Promise(function(resolve) {
       var audio = new Audio(url);
@@ -37,6 +37,6 @@ $("button").click(playAll);
       })
     }, Promise.resolve())
   })
-};
+///-};
 // -------------------------------------------------------------------------------||
 // Button Click
