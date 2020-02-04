@@ -9,10 +9,10 @@ var audioAddress = [
 
 // ------------------------------------------------------------------------------->>
 // Button Click
-///-$("button").click(playAll);
+$("button").click(playAll);
 
 //
-  ///-function playAll() {
+  function playAll() {
   Promise.all(audioAddress.map(function(url) {
     return new Promise(function(resolve) {
       var audio = new Audio(url);
@@ -22,7 +22,7 @@ var audioAddress = [
       audio.oncanplay = function() {
         resolve(audio);
       }
-    })
+    }) 
   }))
   .then(function(data) {
     data.reduce(function(promise, a, index) {
@@ -37,6 +37,6 @@ var audioAddress = [
       })
     }, Promise.resolve())
   })
-///-};
+};
 // -------------------------------------------------------------------------------||
 // Button Click
